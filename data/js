@@ -1,0 +1,3 @@
+console.log(Array.prototype.slice.call(document.querySelectorAll('#content h2')).map(element => {
+	return (element.innerHTML.replace(': ', '')) + ": " + JSON.stringify(element.nextSibling.nextElementSibling.innerHTML)
+}).join('\n').replace('&nbsp;: "Finances: "\n', '').replace(/<span>/g, '').replace(/<\/span>/g, '').toString())
